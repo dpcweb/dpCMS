@@ -43,7 +43,7 @@ class Menu
 		$z = '';
 		$q = $this->db->query("SELECT `id`, `name` FROM `category`");
 		while($r = $q->fetch_assoc()){
-			$z .= '<li>'.$r['name'].'</li>';
+			$z .= '<li><a href="'.$r['name'].'">'.$r['name'].'</a></li>';
 		}
 		$this->menus = $z;
 	}

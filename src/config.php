@@ -1,6 +1,6 @@
 <?php
 $db['user'] = 'root';
-$db['pass'] = '';
+$db['pass'] = 'pulamea123';
 $db['host'] = 'localhost';
 $db['db']   = 'cms';
 

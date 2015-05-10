@@ -53,7 +53,7 @@ class Articles
 			$z .= '
 			<h2>'.$r['title'].'</h2>
 			'.$r['content'].'
-			';
+			<hr />';
 		}
 		$this->article = $z;
 	}
