@@ -3,4 +3,4 @@
 <li>Adding articles, Category </li> 
 <li> seo - friendly, many others </li>
 
-<h1>NOT RELASE</h1>
+<h1>NOT YET RELASED</h1>
