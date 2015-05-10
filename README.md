@@ -1,2 +1,5 @@
 # dpCMS
-Content managment system with template engine, adding articles, category, seo - friendly, many others.
+Content managment system 
+<li> template engine<li> <br />
+<li>Adding articles, Category </li> <br />
+<li> seo - friendly, many others. </li>
