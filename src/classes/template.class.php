@@ -5,11 +5,13 @@ class Template
 	protected $template;
 	protected $menu;
 	protected $articles;
+	protected $injector;
 
-	public function __construct(Menu $menu, Articles $articles)
+	public function __construct(Menu $menu, Articles $articles, Injector $injector)
 	{
 		$this->menu = $menu;
 		$this->articles = $articles;
+		$this->injector = $injector;
 	}
 
 	// set template
@@ -44,10 +46,13 @@ class Template
 			$s = '<html><h1>Page not found</h1></html>';
 		}
 
+		//assets 
+
 		// template engine replace
 		$s = str_replace("{BASE_DIR}", $this->dir.'/'.$this->template, $s);
 		$s = str_replace("{MENU}", $this->menu->menus, $s);
 		$s = str_replace("{ARTICLES}", $this->articles->article, $s);
+		$s = str_replace("{SELECT['ARTICLE']}", $this->injector->options, $s);
 				
 		// render page
 		echo $s;	

@@ -38,10 +38,10 @@ class Menu
 		}
 	}
 	// init menu
-	public function show()
+	public function show($item)
 	{
 		$z = '';
-		$q = $this->db->query("SELECT `id`, `name` FROM `category`");
+		$q = $this->db->query("SELECT `id`, `name` FROM `category` WHERE `category` = '{$item}'");
 		while($r = $q->fetch_assoc()){
 			$z .= '<li><a href="'.$r['name'].'">'.$r['name'].'</a></li>';
 		}

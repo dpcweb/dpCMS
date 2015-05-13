@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>Dashboard</title>
+		<!-- META !-->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- STYLE !-->
+		<link rel="stylesheet" href="/c/admin/{BASE_DIR}/style/style.css" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+		<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+		<script>tinymce.init({selector:'textarea'});</script>
+	</head>
+
+	<body>
+		<div class="logo"><ul>dpCMS</ul></div>
+		<div class="nav">
+			<ul>
+				{MENU}
+			</ul>
+		</div>
+		<div class="content">
+			<div id="articles">
+				<form action="" method="post">
+					Title: <input type="text" name="title"><br /><br />
+				
+					<textarea name="content"></textarea><br /><br />
+					<input type="submit" name="articles" value="Add article">
+				</form>
+				<hr />
+				<div id="edit">
+					Select an article: 
+					<select>
+						{SELECT['ARTICLE']}
+					</select>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	</body>
+</html>
